@@ -15,7 +15,7 @@ body {
 .btn {
   outline: none;
   border: none;
-  background-color: rgb(4, 4, 107);
+  background-color: #04046b;
   color: white;
   padding: 10px 25px;
   border-radius: 20px;
@@ -27,43 +27,45 @@ body {
 
 .btn:hover,
 .btn:focus {
-  background-color: rgb(6, 6, 145);
+  background-color: #060691;
 }
 
-.btn__tooltip {
+.tooltip {
   position: relative;
   overflow: visible;
 }
 
-.btn__tooltip:hover::after,
-.btn__tooltip:hover::before,
-.btn__tooltip:focus::after,
-.btn__tooltip:focus::before {
-  display: block;
-}
-
-.btn__tooltip::after {
+.tooltip::after {
   content: "";
   position: absolute;
   display: none;
-  top: -20px;
+  bottom: calc(100% + 5px);
   left: 50%;
   transform: translateX(-50%);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid rgb(225, 225, 255);
+  border-top: 10px solid #e1e1ff;
   border-radius: 2px;
 }
 
-.btn__tooltip::before {
+.tooltip::before {
   content: attr(data-tooltip);
   position: absolute;
   display: none;
-  top: -42px;
+  width: max-content;
+  max-width: 50ch;
+  bottom: calc(100% + 11px);
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(225, 225, 255);
-  color: rgb(1, 1, 29);
+  background-color: #e1e1ff;
+  color: #01011d;
   padding: 5px 10px;
   border-radius: 100px;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before,
+.tooltip:focus::after,
+.tooltip:focus::before {
+  display: block;
 }
