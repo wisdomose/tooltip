@@ -36,7 +36,9 @@ body {
 }
 
 .btn__tooltip:hover::after,
-.btn__tooltip:hover::before {
+.btn__tooltip:hover::before,
+.btn__tooltip:focus::after,
+.btn__tooltip:focus::before {
   display: block;
 }
 
