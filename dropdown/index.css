@@ -53,7 +53,7 @@ body {
   transition: transform 250ms linear;
 }
 
-.dropdown__btn:hover::after {
+.dropdown__btn--open::after {
   transform: translate(50%, -50%) rotate(180deg);
 }
 
@@ -64,6 +64,8 @@ body {
   width: 100%;
   top: calc(100% + 10px);
   display: none;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .dropdown__items--open {
@@ -74,12 +76,13 @@ body {
   padding: 10px 20px;
   width: 100%;
   border: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: start;
+  background-color: transparent;
 }
 
 .dropdown__item > button:hover,
 .dropdown__item > button:focus {
-  background-color: rgb(233, 233, 233);
+  background-color: #e9e9e9;
   cursor: pointer;
 }
